@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Reviews - Review</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Include Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Include Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <style>
+        body
+    {
+        background-image: url("/static/images/background2.jpeg");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+        .select-box-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px; /* Add margin for spacing */
+        }
+
+        .range-input-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px; /* Add margin for spacing */
+        }
+
+        .select-box-item {
+            flex-basis: calc(33.33% - 10px); /* Adjust width for 3 items in a row */
+        }
+
+        .range-input-item {
+            flex-basis: calc(25% - 10px); /* Adjust width for 4 items in a row */
+        }
+        .navbar-brand {
+    font-size: 30px; 
+    font-style: bold;
+    font-family: 'Times new roman', fantasy;
+}
+.nav-item{
+    font-size: 20px;
+    font-style: bold;
+    font-family: 'Times new roman', fantasy;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand"  >Aero Opinion</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/review">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- ... navigation code ... -->
+    </nav>
+    
+    <div class="container mt-4">
+        <h2>Aero Opinion - Review Page</h2>
+
+    <form action="/pred" method="post">
+        <!-- Select Box with Search Option (Select2) -->
+        <div class="form-group select-box-container">
+            <div class="select-box-item">
+                <label for="Airline name">Select Airline:</label>
+                <select class="form-control" id="Airline name" name="Airline name">
+                    <option >Air India</option>
+                    <option >Emirates</option>
+                    <option >AirAsia</option>
+                    <option >Germanwings</option>
+                    <option >Caribbean Airlines</option>
+                    <option >GoAir</option>
+                </select>
+            </div>
+            <div class="select-box-item">
+                <label for="Origin">Origin:</label>
+                <select class="form-control" id="Origin" name="Origin">
+                    <option >Bangalore</option>
+                    <option >Melbourne</option>
+                    <option >London</option>
+                    <option >Los Angeles</option>
+                    <option >Sydney</option>
+                    <option >Mumbai</option>
+                </select>
+            </div>
+            <div class="select-box-item">    
+                <label for="Destination">Destination:</label>
+                <select class="form-control" id="Destination" name="Destination">
+                    <option >Chennai</option>
+                    <option >New York</option>
+                    <option >Dubai</option>
+                    <option >Singapore</option>
+                    <option >Melbourne</option>
+                    <option >Jaipur</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Five Select Boxes -->
+        <div class="form-group select-box-container">
+            <div class="select-box-item">
+                <label for="Seat Type">Seat Type:</label>
+                <select class="form-control" id="Seat Type" name="Seat Type">
+                    <option>Economy Class</option>
+                    <option>Business Class</option>
+                    <option>Premium Economy</option>
+                    <option>First Class</option>
+                </select>
+            </div>
+            <div class="select-box-item">
+                <label for="Type Of Traveller">Type of Traveller:</label>
+                <select class="form-control" id="Type Of Traveller" name="Type Of Traveller">
+                    <option >Solo Leisure</option>
+                    <option >Couple Leisure</option>
+                    <option >Family Leisure</option>
+                    <option >Business</option>
+                </select>
+            </div>
+            <div class="select-box-item">
+                <label for="Verified">Verified:</label>
+                <select class="form-control" id="Verified" name="Verified">
+                    <option>True</option>
+                    <option>False</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group select-box-container">
+            <div class="select-box-item">
+                <label for="Month Flown">Month Flown:</label>
+                <select class="form-control" id="Month Flown" name="Month Flown">
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+            </div>
+            <div class="select-box-item">
+                <label for="Year Flown">Year Flown:</label>
+                <select class="form-control" id="Year Flown" name="Year Flown">
+                    <option>2021</option>
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                </select>
+            </div>
+        </div>
+        <!-- Repeat similar form-group blocks for selectBox3 to selectBox5 -->
+
+        <!-- Four Range Inputs -->
+        <div class="form-group range-input-container">
+            <div class="range-input-item">
+                <label for="S_C">Seat Comfort:</label>
+                <input type="range" class="form-control-range" id="S_C" name="S_C" min="0" max="5">
+            </div>
+            <div class="range-input-item">
+                <label for="F_B">Food Beverages:</label>
+                <input type="range" class="form-control-range" id="F_B" name="F_B" min="0" max="5">
+            </div>
+            <div class="range-input-item">
+                <label for="G_S">Ground Service:</label>
+                <input type="range" class="form-control-range" id="G_S" name="G_S" min="0" max="5">
+            </div>
+            <div class="range-input-item">
+                <label for="O_R">Overall Rating:</label>
+                <input type="range" class="form-control-range" id="O_R" name="O_R" min="0" max="10">
+            </div>
+        </div>
+        <!-- Repeat similar form-group blocks for rangeInput2 to rangeInput4 -->
+
+        <!-- Button to Trigger Action -->
+        <button type="submit" class="btn btn-success btn-lg">Submit</button>
+
+        <!-- Result Display Area -->
+        <div id="resultArea" class="mt-3">
+            <h3>Prediction Result:{{result}}</h3>
+            <!-- Result will be displayed here -->
+        </div>
+    </form>
+</body>
+</html>

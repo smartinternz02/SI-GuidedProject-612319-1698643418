@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aero Opinion - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+	
+        .bg-dark {
+            background-color: 	#4B92BB!important;
+        }
+        #result {
+            color: #0a1c4ed1;
+        }
+        body
+    {
+        background-image: url("/static/images/background.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        
+    }
+    #bottomRightButton {
+    position: fixed;
+    background-color:#778899;
+    bottom: 475px;
+    left: 250px;
+}   
+.navbar-brand {
+    font-size: 30px; 
+    font-style: bold;
+    font-family: 'Times new roman', fantasy;
+}
+.nav-item{
+    font-size: 20px;
+    font-style: bold;
+    font-family: 'Times new roman', fantasy;
+}
+
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand"  >Aero Opinion</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/review">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <h1>Welcome to Airline Reviews</h1>
+        <p>Here you can share your travel experience with us to make your next trip more comfortable.</p>
+    </div>
+
+    <a href="/review" class="btn btn-primary btn-floating" id="bottomRightButton">Share your Experience</a>
+</body>
+</html>
